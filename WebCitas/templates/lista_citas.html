@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista de citas</title>
+	<link rel="stylesheet" type="text/css" href="/static/lista_citas.css">
+</head>
+<body>
+	<h1>Lista de citas</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre del paciente</th>
+				<th>Teléfono</th>
+				<th>Correo electrónico</th>
+				<th>Síntomas</th>
+				<th>Fecha de la cita</th>
+				<th>Médico</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for cita in citas %}
+			<tr>
+				<td>{{ cita[1] }}</td>
+				<td>{{ cita[2] }}</td>
+				<td>{{ cita[3] }}</td>
+				<td>{{ cita[4] }}</td>
+				<td>{{ cita[5] }}</td>
+				<td>{{ cita[6] }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
+
